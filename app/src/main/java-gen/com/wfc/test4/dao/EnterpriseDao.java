@@ -24,9 +24,9 @@ public class EnterpriseDao extends AbstractDao<Enterprise, Long> {
     */
     public static class Properties {
         public final static Property Id = new Property(0, Long.class, "id", true, "_id");
-        public final static Property FullName = new Property(1, String.class, "fullName", false, "full_name");
-        public final static Property ShortName = new Property(2, String.class, "shortName", false, "short_name");
-        public final static Property CreateTime = new Property(3, java.util.Date.class, "createTime", false, "create_time");
+        public final static Property FullName = new Property(1, String.class, "fullName", false, "FULL_NAME");
+        public final static Property ShortName = new Property(2, String.class, "shortName", false, "SHORT_NAME");
+        public final static Property CreateTime = new Property(3, java.util.Date.class, "createTime", false, "CREATE_TIME");
     };
 
 
@@ -43,9 +43,9 @@ public class EnterpriseDao extends AbstractDao<Enterprise, Long> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "'ENTERPRISE' (" + //
                 "'_id' INTEGER PRIMARY KEY ," + // 0: id
-                "'full_name' TEXT," + // 1: fullName
-                "'short_name' TEXT," + // 2: shortName
-                "'create_time' INTEGER);"); // 3: createTime
+                "'FULL_NAME' TEXT," + // 1: fullName
+                "'SHORT_NAME' TEXT," + // 2: shortName
+                "'CREATE_TIME' INTEGER);"); // 3: createTime
     }
 
     /** Drops the underlying database table. */

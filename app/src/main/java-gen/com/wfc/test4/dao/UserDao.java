@@ -27,7 +27,7 @@ public class UserDao extends AbstractDao<User, Long> {
         public final static Property Phone = new Property(1, String.class, "phone", false, "PHONE");
         public final static Property Name = new Property(2, String.class, "name", false, "NAME");
         public final static Property Sex = new Property(3, Integer.class, "sex", false, "SEX");
-        public final static Property CreateTime = new Property(4, java.util.Date.class, "createTime", false, "create_time");
+        public final static Property CreateTime = new Property(4, java.util.Date.class, "createTime", false, "CREATE_TIME");
     };
 
 
@@ -47,7 +47,7 @@ public class UserDao extends AbstractDao<User, Long> {
                 "'PHONE' TEXT NOT NULL ," + // 1: phone
                 "'NAME' TEXT," + // 2: name
                 "'SEX' INTEGER," + // 3: sex
-                "'create_time' INTEGER);"); // 4: createTime
+                "'CREATE_TIME' INTEGER);"); // 4: createTime
     }
 
     /** Drops the underlying database table. */

@@ -43,7 +43,7 @@ public class MyDaoGenerator {
         // For example, a property called “creationDate” will become a database column “CREATION_DATE”.
         note.addStringProperty("name");
         note.addIntProperty("sex");
-        note.addDateProperty("createTime").columnName("create_time");
+        note.addDateProperty("createTime");
     }
 
     private static void addEnterprise(Schema schema) {
@@ -55,10 +55,10 @@ public class MyDaoGenerator {
         // greenDAO 会自动根据实体类的属性值来创建表字段，并赋予默认值
         // 接下来你便可以设置表中的字段：
         note.addIdProperty();
-        note.addStringProperty("fullName").columnName("full_name");
+        note.addStringProperty("fullName");
         // 与在 Java 中使用驼峰命名法不同，默认数据库中的命名是使用大写和下划线来分割单词的。
         // For example, a property called “creationDate” will become a database column “CREATION_DATE”.
-        note.addStringProperty("shortName").columnName("short_name");
-        note.addDateProperty("createTime").columnName("create_time");
+        note.addStringProperty("shortName");
+        note.addDateProperty("createTime");
     }
 }
